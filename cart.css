@@ -1,0 +1,125 @@
+/* Стиль для контейнера корзины */
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.cart-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.remove-item {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #d62828;
+}
+
+/* Стиль для суммарной стоимости корзины */
+.cart-summary {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1d3557;
+}
+
+/* Стиль для кнопок */
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #457b9d, #1d3557);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для формы */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Для формы самовывоза и доставки */
+#pickup-form, #delivery-form {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input, select {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Стиль для ошибок */
+#error-message {
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}

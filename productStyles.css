@@ -1,0 +1,131 @@
+/* Основной стиль для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер для основного контента */
+.product-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-details:hover {
+    transform: scale(1.02); /* Легкое увеличение при наведении */
+}
+
+/* Стиль для изображения товара */
+.product-details img {
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 30px; /* Отступ от текста */
+}
+
+/* Стиль для текстовой части */
+.product-details .text {
+    max-width: 600px;
+    margin-left: 30px;
+}
+
+.product-details h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1d3557;
+    margin-bottom: 20px;
+}
+
+/* Цена товара */
+.product-details .price {
+    font-size: 24px;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Описание товара */
+.product-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Стиль для кнопок */
+.product-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.product-buttons button {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Кнопка "Добавить в корзину" */
+.product-buttons .add-to-cart {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-buttons .add-to-cart:hover {
+    background: linear-gradient(135deg, #457b9d, #1d3557);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Кнопка "Назад в магазин" теперь такая же как и "Добавить в корзину" */
+.product-buttons .back-to-shop {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-buttons .back-to-shop:hover {
+    background: linear-gradient(135deg, #457b9d, #1d3557);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-details img {
+        max-width: 80%;
+    }
+
+    .product-details .text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .product-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+

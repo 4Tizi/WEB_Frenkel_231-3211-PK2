@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">ChargerShop</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="login.html" class="active">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Вход в аккаунт</h1>
+        <form id="login-form">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Войти</button>
+            <p id="error-message" style="color: red; display: none;">Неверный логин или пароль!</p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Контакты: support@chargeshop.ru | © 2025 ChargerShop</p>
+    </footer>
+</body>
+</html>
+

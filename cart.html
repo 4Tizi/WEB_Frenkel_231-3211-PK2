@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="scripts.js" defer></script>
+    <script src="cart.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">ChargerShop</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="cart.html" class="active">Корзина</a></li>
+                <li><a id="login-link" href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Корзина</h1>
+        <div id="cart-container"></div>
+        <div class="cart-summary">
+            <h3>Итог:</h3>
+            <p>Общая стоимость: <span id="total-price">0 ₽</span></p>
+        </div>
+
+        <fieldset>
+            <legend>Выберите способ получения</legend>
+            <label>
+                <input type="radio" name="delivery" value="pickup" checked> Самовывоз
+            </label>
+            <label>
+                <input type="radio" name="delivery" value="delivery"> Доставка
+            </label>
+        </fieldset>
+
+        <!-- Форма для самовывоза -->
+        <div id="pickup-form" style="display:none;">
+            <fieldset class="pickup-details">
+                <label for="pickup-name">ФИО:</label>
+                <input type="text" id="pickup-name" placeholder="Иванов Иван" required>
+
+                <label for="pickup-phone">Номер телефона:</label>
+                <input type="tel" id="pickup-phone" placeholder="+7-000-000-00-00" required>
+
+                <label for="pickup-email">Email:</label>
+                <input type="email" id="pickup-email" placeholder="ivanov1990@mail.ru" required>
+
+                <label for="pickup-address">Адрес магазина:</label>
+                <select id="pickup-address">
+                    <option value="store1">Москва, ул. Тверская, 10</option>
+                    <option value="store2">Москва, ул. Арбат, 25</option>
+                    <option value="store3">Москва, ул. Садовая, 12</option>
+                </select>
+            </fieldset>
+        </div>
+
+        <!-- Форма для доставки -->
+        <div id="delivery-form" style="display:none;">
+            <fieldset class="delivery-details">
+                <label for="delivery-name">ФИО:</label>
+                <input type="text" id="delivery-name" placeholder="Иванов Иван" required>
+
+                <label for="delivery-phone">Номер телефона:</label>
+                <input type="tel" id="delivery-phone" placeholder="+7-000-000-00-00" required>
+
+                <label for="delivery-email">Email:</label>
+                <input type="email" id="delivery-email" placeholder="ivanov1990@mail.ru" required>
+
+                <label for="delivery-address">Адрес доставки:</label>
+                <input type="text" id="delivery-address" placeholder="ул.Прянишникова, 2А, кв.0" required>
+
+                <label for="delivery-time">Удобное время:</label>
+                <input type="time" id="delivery-time" min="08:00" max="23:00" step="1800" required>
+                <label id="open-time">Выберите время в диапазоне с 08:00 до 23:00 с шагом 30 минут</label>
+
+                <p id="error-message" style="color: red; display: none;">Пожалуйста, выберите время в пределах с 08:00 до 23:00 с шагом 30 минут.</p>
+            </fieldset>
+        </div>
+
+        <button id="checkout-button">Оформить заказ</button>
+        <button id="reset-button">Сбросить форму</button>
+        <button id="clear-cart-button">Очистить корзину</button>
+    </main>
+
+    <footer>
+        <p>Контакты: support@chargeshop.ru | © 2025 ChargerShop</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

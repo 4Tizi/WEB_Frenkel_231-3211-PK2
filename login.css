@@ -1,0 +1,82 @@
+/* Основной контейнер */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Заголовок */
+main h1 {
+    font-size: 28px;
+    color: #1d3557;
+    margin-bottom: 20px;
+}
+
+/* Форма входа */
+form#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Поля ввода */
+form#login-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+form#login-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Кнопка отправки */
+form#login-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form#login-form button:hover {
+    background: linear-gradient(135deg, #457b9d, #1d3557);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Сообщение об ошибке */
+#error-message {
+    font-size: 14px;
+    color: #e63946;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}

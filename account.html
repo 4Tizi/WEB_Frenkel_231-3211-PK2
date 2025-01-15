@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аккаунт</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css"> <!-- Подключаем новый файл стилей -->
+    <script src="account.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">ChargerShop</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li id="account-link"><a href="account.html">Аккаунт</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Аккаунт</h1>
+        <div id="account-info">
+            <p>Добро пожаловать, <span id="user-name"></span>!</p>
+            <h2>Ваши заказы</h2>
+            <ul id="order-list"></ul>
+            <div id="orders-container"></div>
+        </div>
+        <button id="logout-button">Выйти</button>
+        <button id="clear-orders-button">Очистить заказы</button>
+        <div id="orders-container"></div>
+    </main>
+
+    <footer>
+        <p>Контакты: support@chargeshop.ru | © 2025 ChargerShop</p>
+    </footer>
+</body>
+</html>
+

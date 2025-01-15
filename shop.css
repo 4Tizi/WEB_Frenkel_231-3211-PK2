@@ -1,0 +1,147 @@
+/* Общие стили для страницы */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+}
+
+/* Контейнер для карточек товара */
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок по умолчанию */
+    gap: 30px; /* Отступы между карточками */
+    padding: 20px;
+    justify-items: center;
+    margin: 0 auto; /* Центрирование контейнера */
+    width: 100%; /* Обеспечиваем, чтобы контейнер занимал всю доступную ширину */
+    max-width: 100%; /* Чтобы не выходил за пределы экрана */
+}
+
+/* Карточка товара */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid transparent;
+    max-width: 280px;
+    width: 100%;
+    margin: 0;
+}
+
+/* Эффект при наведении на карточку */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Стиль для изображения товара */
+.product-card img {
+    width: 100%; /* Ширина изображения по размеру контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    max-height: 200px; /* Ограничим максимальную высоту изображения */
+    object-fit: contain; /* Чтобы изображение полностью отображалось */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* Название товара */
+.product-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1d3557;
+    margin-bottom: 10px;
+    height: 45px;
+    overflow: hidden;
+}
+
+/* Цена товара */
+.product-card .price {
+    font-size: 22px;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Кнопка добавления в корзину и перехода */
+.product-card button {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Эффект на кнопке */
+.product-card button:hover {
+    background: linear-gradient(135deg, #457b9d, #1d3557);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Адаптивность */
+
+/* Для экранов от 1600px и больше — 5 колонки */
+@media (min-width: 1600px) {
+    #product-container {
+        grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+    }
+}
+
+/* Для экранов от 1400px до 1599px — 4 колонки */
+@media (max-width: 1599px) and (min-width: 1400px) {
+    #product-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    }
+}
+
+/* Для экранов от 1024px до 1399px — 3 колонки */
+@media (max-width: 1399px) and (min-width: 1024px) {
+    #product-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    }
+}
+
+/* Для экранов от 768px до 1023px — 2 колонки */
+@media (max-width: 1023px) and (min-width: 768px) {
+    #product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    }
+}
+
+/* Для экранов от 480px до 767px — 1 колонка */
+@media (max-width: 767px) and (min-width: 480px) {
+    #product-container {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+}
+
+/* Для экранов меньше 480px — 1 колонка */
+@media (max-width: 479px) {
+    #product-container {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+}
+
+
+
+
+
